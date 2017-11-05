@@ -1,12 +1,15 @@
-<h1>Showing selected article</h1>
-
-<h2>Title: </h2>
-<%= @article.title %>
-
-</br>
-
-<h2>Description: </h2>
-<%= @article.description%>
-
-<%= link_to "Back to listing article", articles_path %>
-
+<div class="card center">
+    <div class="card-body">
+    
+        <h2 align="card-title">Title: <%= @article.title %></h2>
+    
+    
+        </br>
+    
+        <p class="card-text">Description: 
+        <%= simple_format(@article.description) %>
+        </p>
+        
+    <%= link_to "Back to listing article", articles_path, class: "card-link" %>
+    </div>
+</div>
