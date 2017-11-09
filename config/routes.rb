@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   
   get 'homepage/about' => 'homepage#about'
   
+  get 'singup' => 'users#new'
+  
+  post 'users' => 'users#create'
+  
   resources :articles
 
   # Example of regular route:
