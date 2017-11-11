@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   get 'singup' => 'users#new'
   
+  resources :users, except: [:new]
+  
   post 'users' => 'users#create'
   
   resources :articles
